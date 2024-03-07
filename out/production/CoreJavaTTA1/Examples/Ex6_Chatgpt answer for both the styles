@@ -1,0 +1,97 @@
+//Grade Calculator
+/*WAP that calculates and displays the letter grade for a given numerical
+  score (e.g A,B,C,D or F) based on the following grade scale :
+   A: 90-100
+   B: 80-89
+   C: 70-79
+   D: 60-69
+   F: 0-59*/
+
+Solution 1 - Program written by me
+package Examples;
+//Grade Calculator
+/*WAP that calculates and displays the letter grade for a given numerical
+  score (e.g A,B,C,D or F) based on the following grade scale :
+   A: 90-100
+   B: 80-89
+   C: 70-79
+   D: 60-69
+   F: 0-59*/
+
+import java.util.Scanner;
+
+public class Ex6_GradeCalulator_TTA {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your score");
+        int score = scan.nextInt();
+        if(score>=90 && score<=100){
+            System.out.println("Your Grade is A");
+        }
+        else if(score>=80 && score<=89){
+            System.out.println("Your Grade is B");
+        }
+        else if(score>=70 && score<=79){
+            System.out.println("Your Grade is C");
+        }
+        else if(score>=60 && score<=69){
+            System.out.println("Your Grade is D");
+        }
+        else{
+            if(score>=0 && score<=59){
+                System.out.println("Your Grade is F");
+            }}
+        }
+        }
+
+Solution 2 - Program written by Tutor
+package Examples;
+
+import java.util.Scanner;
+
+public class Ex6_GradeCalulator_TTA2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your score");
+        int score = scan.nextInt();
+        char grade = '0';
+        if(score>=90 && score<=100){
+            grade = 'A';
+        }
+        else if(score>=80 && score<=89){
+            grade = 'B';
+        }
+        else if(score>=70 && score<=79){
+            grade = 'C';
+        }
+        else if(score>=60 && score<=69){
+            grade = 'D';
+        }
+        else{
+            grade = 'F';
+
+            }
+        System.out.println("Your Grade is "+grade);
+    }
+    }
+
+For the problem statement i mentioned, i have given 2 solutions, one is written by me by trying and one is written by my tutor, which one is correct? or both are correct? Which is one is code efficient ? so that i practice according
+
+ChatGPT
+Both solutions achieve the desired functionality of calculating and displaying the letter grade based on a given numerical score. However, there are differences in coding style and efficiency between the two solutions.
+
+Let's analyze them:
+
+Your Solution (Solution 1):
+
+It directly prints the grade inside each condition block.
+It has an additional nested if condition to handle scores below 60.
+It does not use a character variable to store the grade.
+Tutor's Solution (Solution 2):
+
+It assigns the grade to a character variable.
+It directly prints the grade after the if-else ladder.
+It avoids the nested if condition for scores below 60.
+Both solutions are correct in terms of functionality, but the tutor's solution is slightly more efficient and cleaner in terms of code readability. It uses a character variable to store the grade and directly prints the grade after the if-else ladder without nested conditions. Additionally, it avoids unnecessary nested conditions.
+
+To improve your coding efficiency, you could adopt some practices from the tutor's solution, such as using a character variable to store the grade and avoiding unnecessary nested conditions. These practices can make your code cleaner and easier to understand.
